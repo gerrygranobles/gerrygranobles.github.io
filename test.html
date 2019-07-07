@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <title>Computer Security Incident Response Teams Incident Form</title>
+        <head>
+            <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        </head>
+		<body>
+                <!-- INCIDENT FORM -->
+                <h2>NEW INCIDENT FORM</h2>
+
+                <!-- PERSON/VICTIM FORM -->
+                <b>VICTIM INFORMATION</b><br>
+                Victim Number: <br>	
+                <input type = 'number' name = 'victimNumber'><br>
+                First Name: <br>
+                <input type = 'text' name = 'firstName'><br>
+                Last Name: <br>
+                <input type = 'text' name = 'lastName'><br>
+                Job Title: <br>
+                <input type = 'text' name = 'jobTitle'><br>
+                E-mail Address: <br>
+                <input type = 'email' name = 'emailAddress'><br><br>
+
+
+                <b>INCIDENT INFORMATION</b><br>
+                    Type: <br>
+                    <select name="type" size="4">
+                        <option value="DoS">DoS</option>
+                        <option value="MitM">Man in the Middle</option>
+                        <option value="phishing">Phishing</option>
+                        <option value="drive-by">Drive-by</option>
+                        <option value="Password">Password</option>
+                        <option value="SQL injection">SQL injection</option>
+                        <option value="XSS">XSS</option>
+                        <option value="Eavesdropping">Eavesdropping</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Malware">Malware</option>
+                        <option value="Other">Other</option>
+                    </select><br>
+                    IP Address Affected: <br>
+                    <input type = 'text' name = 'ipAddress'><br>
+                    Date:
+                    <input type = 'date' name = 'lastName'><br>
+                    State: <select>
+                          <option value="open">Open</option>
+                          <option value="closed">Closed</option>
+                          <option value="stalled">Stalled</option>
+                          </select> <br>
+
+                    Comment&#40;s&#41;: <br>
+                    <input type = 'text' name = 'comment'><br>
+                    Handler Name: <br>
+                    <input type = 'text' name = 'handlerName'><br><br>
+
+
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+		</body>
+</html>
