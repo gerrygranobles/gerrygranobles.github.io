@@ -1,198 +1,212 @@
-.center { 
-  height: 100%;
-  position: relative;
-}
-
-.center p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-html  {
-    font-family: sans-serif;
-	height:100%;
-}
-body {
-    position: relative;
-    max-height: 100%;
-    max-width: 100%;
-}
-#titlename {
-    font: Arial;
-    font-size: 50pt;
-    font-weight: bold;
-    padding-left: 5%;
-    padding-top: 3%;
-}
-#about {
-    border-left: 1px solid black;
-    height: 500px;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 10px;
-    position: relative;
-	
-}
-p {
-    color: black;
-    padding: 2%;
+html{
+    height: 100%;
+    width:100%;
     
 }
-#contact {
-    top: 50%;
-    right: 10px;
+
+/* INDEX */
+.subtext {
+    font-size: 20pt;
+    font-weight: 100;
+}
+.subtext:hover {
+    /*this should do something i think idk*/
+}
+nav {
+    font-family: ainslie-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24pt;
+    
+}
+nav .navbar-nav  a{
+    color: #1c2331;
+    margin-left: 30px;
+  }
+
+.navbar-brand {
+    padding: 0;
+}
+
+
+.navbar-brand  img {
+    padding: 15px;  
+    height: 80px;
+}  
+
+#box {
+    padding: 4%;
+    width: 100%;
+    height: 500px;
+    background-color: #80a9c4;
+    position: absolute;
+    z-index: -1;
+    animation: 1s ease-out 0s 1 slideDown;
+}
+#hi {
     position: fixed;
-    width: 32px;
-    height: auto;
-    z-index: 1;
-}
-.title {
-    font-family: 'Biryani', sans-serif;
-    margin-bottom: -20px;
+    margin-top: 240px;
+    margin-left: 250px;
+    text-align: left;
     color: white;
+    font-size: 20pt;
+    font-weight: 100;
+    
+}
+.name {
+    width:1200px;
+    margin-top: 250px;
+    position: relative;
+    text-align: center;
 }
 
-input {
-    caret-color: #8ab0e2;
-    background-color: lightgray;
-    color: #424242;
-}
-
-input[type=text], select {
-  width: 90%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
-
-input[type=password], select {
-  width: 90%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
 
 input[type=submit] {
-  width: 90%;
-  background-color: #8ab0e2;
+  background-color: black;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #6c8bb5;
+  background-color: #45a049;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+#container {
+font-family: ainslie-sans, sans-serif;
+    margin-top: 40px;
+font-style: normal;
+  border-radius: 5px;
+  background-color: aliceblue;
+  padding: 50px;
 }
 
-#stage {
+.footer {
+    position: fixed;
+    bottom: 15px;
+    text-align: center;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #424242;
+    color: lightgray;
 }
-#top {
-    width:98%;
-    height: 7%;
-    position: relative;
-    margin-left: 0;
-    padding-top: 10px;
-    background-color: #424242;
+.footer img{
+    width: 30px;
+    margin-right: 10px;
 }
 
-.wordlogo {
-    height: 50%;
-    width: auto;
-    margin-left: 10px;
-    margin-top: 0px;
+/* ABOUT */
+#box2 {
+    padding: 4%;
+    width: 100%;
+    height:500px;
+    background-color: #80a9c4;
     position: absolute;
-}
-
-.imagelogo {
-    height: 55%;
-    width: auto;
-    margin-top: 0px;
-    margin-left: 48%;
-    position: absolute;
+    z-index: -1;
+    animation: 1.5s ease-out 0s 1 expand forwards;
     
 }
-
-.user {
-    right: 10px;
-    height: auto;
-    width: auto;
-    position: absolute;
+@keyframes expand {
+    0%   {height: 500px;}
+    100% {height:850px;}
 }
-
-#left {
-    width: 19%;
-    height: 87%;
-    position: absolute;
-    margin-left: 0;
-    margin-top: 0;
-    background-color: #969696;
-    border-radius: 4px;
+.name2 {
+    width:1200px;
+    margin-top: 250px;
+    position: relative;
+    text-align: center;
+    animation: 1.5s ease-out 0s 1 shrink forwards;
 }
-
-#right {
-    width:79%;
-    height: 87%;
-    position: absolute;
-    margin-left: 19%;
-    margin-top: 0;
-    background-color: #666666;
-    border-radius: 4px;
+@keyframes shrink {
+    0%   {width:1200px; margin-top:250px}
+    100% {width:500px; margin-top:655px}
 }
-::placeholder {
+.subtext2 {
+    font-size: 20pt;
+    font-weight: 100;
+    animation: 1.5s ease-out 0s 1 bye forwards;
+}
+#hi2 {
+    position: fixed;
+    margin-top: 240px;
+    margin-left: 250px;
+    text-align: left;
     color: white;
+    font-size: 20pt;
+    font-weight: 100;
+    animation: 1.5s ease-out 0s 1 bye forwards;
+    
 }
-#right input[type=text], select {
-    width: 90%;
-    padding: 12px 20px;
-    margin-left: 5%;
-    bottom: 20px;    
-    display: inline-block;
-    border: 1px solid #ccc;
-    background-color: #969696;
-    border-radius: 4px;
-    position: absolute;
-    box-sizing: border-box;
+@keyframes bye {
+    0%   {opacity: 100%;font-size: 20pt;}
+    100% {opacity: 0%;font-size: 10pt; margin-top:25px; }
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
+#aboutbox {
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+    width: 1000px;
+    font-size: 20pt;
+    background-color: white;
+    text-align: left;
+    animation: 1s ease-in 1.5s 1 hello forwards;
+}
+@keyframes hello {
+    0%   {height: 0px;}
+    100% {height: 650px;padding: 5%; }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: white; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: black; 
+ #typing-text {
+     position: absolute; 
+     left: 50%;
+     transform: translate(-50%, 0);
+     overflow: hidden;
+     text-align: left;
+     resize: none;
+     border: none;
+     height: inherit;
+     width: 850px;
+     background: none;
+     margin-top: -20px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #97aac9; 
+/* CONTACT */
+
+ #typing-textbold {
+     position: absolute; 
+     left: 48%;
+     transform: translate(-50%, 0);
+     overflow: hidden;
+     text-align: left;
+     resize: none;
+     border: none;
+     height: inherit;
+     width: 850px;
+     height: 60px;
+     background: none;
+     font-weight: bold;
+     margin-top: -20px;
+     z-index: 2;
 }
+
+form {
+    margin-top: 60px;
+    z-index: 5;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
