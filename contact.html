@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<title>gerrygranobles</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ywz2fgm.css">
+</head>
+
+<body> 
+
+<div id="box2" class="text-center">
+    <nav class="navbar navbar-expand-lg justify-content-center">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html">home</a>
+                <a class="nav-item nav-link" href="projects.html">projects</a>
+                <a class="nav-item nav-link" href="resume.pdf">resume</a>
+                <a class="nav-item nav-link" href="about.html">about</a>
+                <a class="nav-item nav-link" href="contact.html">contact</a>
+                
+            </div> 
+    </nav>
+    
+    
+    <div id="aboutbox">
+        <textarea id="typing-textbold" readonly></textarea>
+        
+        <form method="post" name="contact_form" action="email.php">
+        Your Name: <input type="text" name="name">
+        Email Address: <input type="text" name="email">
+        Message: <textarea name="message"></textarea>
+        <input type="submit" value="Submit">
+        </form>
+        
+        
+        <script>
+            var CharacterPos = 0;
+            var MsgBuffer = "";
+            var TypeDelay = 100; 
+            var NxtMsgDelay = 1000;
+            var MsgIndex = 0;
+            var delay = "";
+            var MsgArray = ["Get in touch!"];
+            
+
+        function StartTyping() {
+            var id = document.getElementById("typing-textbold");
+            if (CharacterPos != MsgArray[MsgIndex].length) {
+                MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+                id.value = MsgBuffer+"_";
+                delay = TypeDelay;
+          
+            } else {
+                delay = NxtMsgDelay;
+                MsgBuffer   = "";
+                CharacterPos = -1;
+            if (MsgIndex!=MsgArray.length-1){
+                MsgIndex++;
+            }   else {
+                MsgIndex = 1;
+                }
+            }
+            CharacterPos++;
+            setTimeout(StartTyping,delay);
+        }
+window.onload = function() {
+ 	setTimeout(function(){ StartTyping(); }, 2500);
+};
+            
+        /* Email */
+            var frmvalidator  = new Validator("contactform");
+            frmvalidator.addValidation("name","req","Please provide your name");
+            frmvalidator.addValidation("email","req","Please provide your email");
+            frmvalidator.addValidation("email","email",
+            "Please enter a valid email address");
+        </script>
+       </div>
+    <div id="hi2">hello, i'm</div>
+    <img src="gerry%20granobles.png" id="name" class="name2">
+    <br>
+    <br>
+    <center> <div class="subtext2">recent computer science graduate seeking a role in UX Design</div></center>
+    
+    
+    
+</div>
+    
+    <div class="footer"><a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="linkedinlogo.png"></a> 
+        <a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="email.png"></a><br>
+    Designed and Developed by Gerry Granobles</div>
+    <!-- i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website. \n\nplease hire me. -->
+   
+       
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html> 
