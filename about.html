@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <title>gerrygranobles</title>
     <link rel="stylesheet" href="https://use.typekit.net/ywz2fgm.css">
-   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body> 
@@ -27,63 +26,41 @@
     
     
     <div id="aboutbox">
-        <textarea id="typing-textbold" readonly></textarea>
-        
-        <form action="https://submit-form.com/1We3qPKBQcme-77mjJxCv" target="_self">
-            <input type="hidden" name="_redirect" value="http://www.gerrygranobles.com/thanks.html"/>
-   <!-- All elements must have a name attribute -->
-            <div class="form2"><div class="form">
-            <div class="input-container">
-                <i class="fas fa-envelope icon"></i><input type="text" name="email" placeholder="Your Email" required></div><div class="input-container">
-                <i class="fa fa-user icon"></i><input type="text" name="name" placeholder="Your Name" required></div>
-                <div class="input-container">
-                <i class="fas fa-question icon"></i>
-                    <input type="text" name="subject" placeholder="Subject" required></div>
-            </div>
-            
-            <textarea id="msg" name="message" placeholder="Enter your message here" required></textarea>
-            </div>
-            <!-- A button of type submit --><br>
-            <div id="button"><button type="submit">Submit</button></div>
-        </form>
-        
-        
-        <script>
-            var CharacterPos = 0;
-            var MsgBuffer = "";
-            var TypeDelay = 100; 
-            var NxtMsgDelay = 1000;
-            var MsgIndex = 0;
-            var delay = "";
-            var MsgArray = ["Get in touch!"];
-            
+        <textarea id="typing-text" readonly></textarea>
 
-        function StartTyping() {
-            var id = document.getElementById("typing-textbold");
-            if (CharacterPos != MsgArray[MsgIndex].length) {
-                MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
-                id.value = MsgBuffer+"_";
-                delay = TypeDelay;
+        <script>
+   var CharacterPos = 0;
+   var MsgBuffer = "";
+   var TypeDelay = 100; 
+   var NxtMsgDelay = 1000;
+   var MsgIndex = 0;
+   var delay = "";
+   var MsgArray = ["hi\n\nmy name is gerry. i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website. \n\nplease hire me."];
+
+   function StartTyping() {
+      var id = document.getElementById("typing-text");
+      if (CharacterPos != MsgArray[MsgIndex].length) {
+         MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+         id.value = MsgBuffer+"_";
+         delay = TypeDelay;
           
-            } else {
-                delay = NxtMsgDelay;
-                MsgBuffer   = "";
-                CharacterPos = -1;
-            if (MsgIndex!=MsgArray.length-1){
-                MsgIndex++;
-            }   else {
-                MsgIndex = 1;
-                }
-            }
-            CharacterPos++;
-            setTimeout(StartTyping,delay);
-        }
+      } else {
+         delay = NxtMsgDelay;
+         MsgBuffer   = "";
+         CharacterPos = -1;
+         if (MsgIndex!=MsgArray.length-1){
+           MsgIndex++;
+         }else {
+           MsgIndex = 1;
+         }
+       }
+       CharacterPos++;
+       setTimeout(StartTyping,delay);
+   }
 window.onload = function() {
  	setTimeout(function(){ StartTyping(); }, 2500);
 };
-            
-        
-        </script>
+</script>
        </div>
     <div id="hi2">hello, i'm</div>
     <img src="gerry%20granobles.png" id="name" class="name2">
@@ -94,7 +71,6 @@ window.onload = function() {
     
     
 </div>
-    
     <div class="footer"><a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="linkedinlogo.png"></a> 
         <a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="email.png"></a><br>
     Designed and Developed by Gerry Granobles</div>
