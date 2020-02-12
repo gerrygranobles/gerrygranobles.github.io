@@ -12,7 +12,11 @@ body {
     font-family: ainslie-sans, sans-serif;
     
 }
-/* MODAL */
+/* 
+
+MODAL 
+
+*/
 /* The Modal (background) */
 .modall {
     position: fixed; /* Stay in place */
@@ -77,23 +81,33 @@ body {
 }
  #typing-text {
      position: absolute; 
+     left: 0;
      overflow: hidden;
      text-align: left;
      resize: none;
      border: none;
      width: 850px;
-     height: 50px;
+     padding-left: 50px;
+     height: auto;
      background: none;
      z-index:2;
-     margin-top: 20px;
+     margin-top: 100px;
+     font-size: 1vw;
 }
 /* END MODAL */
-/* INDEX */
+
+/* 
+
+
+INDEX 
+
+
+*/
 
 nav {
     font-weight: 800;
     font-style: normal;
-    font-size: 24pt;
+    font-size: 2vw;
     z-index: 4;
 }
 nav .navbar-nav  a{
@@ -106,7 +120,7 @@ nav .navbar-nav  a{
     padding: 4%;
     width: 100%;
     height: 50%;
-    background-color: rgb(105,136,164);
+    background-color: #8fb3cf;
     position: fixed;
     z-index: -1;
 }
@@ -118,7 +132,7 @@ nav .navbar-nav  a{
     right: 0;
     display: flex;
     flex-direction: column;
-    font-size: 20pt;
+    font-size: 1.8vw;
     font-weight: 200;
     align-content: flex-start;
 }
@@ -134,53 +148,56 @@ nav .navbar-nav  a{
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 100pt;
+    font-size: 9vw;
     color: black;
     line-height: 95%;
 }
 
 .subtext {
-    padding: 10pt;
-    font-size: 18pt;
+    padding: 20px;
+    font-size: 1.3vw;
     font-weight: lighter;
 }
 .subtext:hover {
     /*this should do something i think idk*/
 }
 
-.footer {
-    position: fixed;
-    bottom: 0px;
-    padding: 20px 0px; 20px; 0px;
-    font-size: 10pt;
-    text-align: center;
-    width: 100%;
-    color: lightgray;
-    background-color: white;
-}
-.footer img{
-    width: 30px;
-    margin-right: 10px;
-}
 
 
-/* RESUME */
-#resume img{
-    max-width: 100%;
-  height: auto;
+
+/* 
+
+
+ABOUT
+
+
+*/
+
+#about {
+    padding: 80px 100px 0px 100px;
+    font-size: 1.5vw;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+#bio {
+    flex:2;
+    padding-right: 50px;
+}
+#picofme {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: antiquewhite;
 }
 
-/* CONTACT */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+/* 
+
+
+CONTACT 
+
+
+*/
 
 input[type=submit] {
   background-color: black;
@@ -203,23 +220,25 @@ input[type=submit] {
      background: none;
      font-weight: bold;
      z-index: 3;
+     font-size: 1.5vw;
          padding:0;
 }
 .form {
     display:flex;
     flex-direction: column;
     width: 100%;
+    height: 200px;
+    border-radius: 3px;
     
 }
 .form2 {
     display:flex;
-    flex-direction: row;
     padding: 0px 100px 0px 100px;
 }
 form {
     margin-top: 60px;
-    z-index: 5;
-    font-size: 12pt;
+    z-index: 1;
+    font-size: .9vw;
     color: black;  
        
 }
@@ -229,15 +248,24 @@ form {
     font-weight: bold;
 }
 input[type=text] {
-    border: 3px solid black;
+   
+}
+.field {
+     border: 3px solid black;
     border-left: none;
     border-radius: 0px 3px 3px 0px;
     width:80%;  
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    
 }
 #msg {
     border:none;
     border: 3px solid black;
-    width: 80%;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0px 0px 0px;
 }
 @keyframes form {
     0%   {opacity: 0%;}
@@ -247,28 +275,30 @@ input[type=text] {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   width: 100%;
+    padding-bottom: 0px;
 }
 
 .icon {
-    margin-top:6px;
+    margin: 10px 0px 10px 0px;
+    top:0px;
     padding: 15px;
     background: none;
     color: black;
     min-width: 50px;
     text-align: center;
-    height:54px;
     border: 3px solid black;
     border-right:none;
     border-radius: 3px 0px 0px 3px;
 }
 
 #button button{
+    font-size: 1vw;
     background-color: black;
     color: white;
     border-radius: 3px;
     border: 3px solid black;
     padding: 20px;
-    width: 800px;
+    width: 80%;
     position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -283,4 +313,27 @@ input[type=text] {
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+/*
+
+
+FOOTER
+
+
+*/
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 20px 0px; 20px; 0px;
+    font-size: .7vw;
+    text-align: center;
+    width: 100%;
+    color: lightgray;
+    background-color: white;
+}
+.footer img{
+    width: 2%;
+    margin-right: 10px;
 }
