@@ -18,18 +18,38 @@
                 <a class="nav-item nav-link" href="index.html">home</a>
                 <a class="nav-item nav-link" href="projects.html">projects</a>
                 <a class="nav-item nav-link" href="resume.pdf">resume</a>
-                <a class="nav-item nav-link" href="about.html">about</a>
+                <a class="nav-item nav-link" id="myBtn">about</a>
                 <a class="nav-item nav-link" href="contact.html">contact</a>
                 
             </div> 
     </nav>
     
+    <!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModall" class="modall">
+
+   <!-- Modal content -->
+<div class="modall-content">
+  <div class="modall-header">
+    <span class="close"></span>
     
-    <div id="aboutbox">
+    <textarea id="typing-text" readonly></textarea>
+  </div>
+  <div class="modall-body">
+    i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website.
+  </div>
+  
+</div>
+
+</div>
+
+   <!--<div id="aboutbox">
         <textarea id="typing-text" readonly></textarea>
         <div id="about">
         i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website. </div><br><br>
-
+-->
         <script>
    var CharacterPos = 0;
    var MsgBuffer = "";
@@ -37,7 +57,7 @@
    var NxtMsgDelay = 1000;
    var MsgIndex = 0;
    var delay = "";
-   var MsgArray = ["hi\n\nmy name is gerry."];
+   var MsgArray = ["here's a little bit about me..."];
 
    function StartTyping() {
       var id = document.getElementById("typing-text");
@@ -59,20 +79,44 @@
        CharacterPos++;
        setTimeout(StartTyping,delay);
    }
-window.onload = function() {
- 	setTimeout(function(){ StartTyping(); }, 2500);
-};
+/*window.onload = function() {
+ 	setTimeout(function(){ StartTyping(); }, 1500);
+};*/
+            // Get the modal
+var modall = document.getElementById('myModall');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modall.classList.toggle('show');
+    setTimeout(function(){ StartTyping(); }, 1500);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.classList.remove('show');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modall) {
+      modall.classList.remove('show');
+    }
+}
 </script>
        </div>
-    <div id="hi2">hello, i'm</div>
-    <img src="gerry%20granobles.png" id="name" class="name2">
-    <br>
-    <br>
-    <center> <div class="subtext2">recent computer science graduate seeking a role in UX Design</div></center>
+    <div id="identity2">
+        <div id="hello">hello, i'm</div>
+        <div><center><img src="gerry%20granobles.png" class="name2"></center></div>
+        <div class="subtext2">recent computer science graduate seeking a role in Digital Design &amp; Development</div>
+    </div> 
     
-    
-    
-</div>
+<!--</div>-->
     <div class="footer"><a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="linkedinlogo.png"></a> 
         <a  href="mailto:geraldinegranobles@gmail.com"><img class="contactimage" src="email.png"></a><br>
     Designed and Developed by Gerry Granobles</div>

@@ -1,65 +1,176 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
     height: 100%;
     width:100%;
+    overflow: hidden;
+}
+body {
+    font-family: ainslie-sans, sans-serif;
     
 }
+/* MODAL */
+/* The Modal (background) */
+.modall {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    bottom: -100%;
+    opacity: 0;
+    transition: bottom 1s, opacity 0.4s;
+    padding: 0px 100px 0px 100px;
+    
+}
+.modall.show {
+    bottom: -20%;
+    opacity: 1;
+}
 
+/* Modal Content/Box */
+.modall-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    
+    width: 600px; /* Could be more or less, depending on screen size */
+    max-width: 100%; /* Could be more or less, depending on screen size */
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modall-header {
+    padding: 2px 16px;
+    color: pink;
+    height:60px;
+}
+
+/* Modal Body */
+.modall-body {padding-bottom: 50%}
+
+.modall-body img{
+    max-width: 100%;
+  height: auto;
+}
+
+/* Modal Content */
+.modall-content {
+    position: relative;
+    background-color:white;
+    margin: auto;
+    height:100%;
+    padding: 0;
+    overflow:auto;
+    width: 80%;
+}
+ #typing-text {
+     position: absolute; 
+     overflow: hidden;
+     text-align: left;
+     resize: none;
+     border: none;
+     width: 850px;
+     height: 50px;
+     background: none;
+     z-index:2;
+     margin-top: 20px;
+}
+/* END MODAL */
 /* INDEX */
-.subtext {
-    font-size: 20pt;
-    font-weight: 100;
-}
-.subtext:hover {
-    /*this should do something i think idk*/
-}
+
 nav {
-    font-family: ainslie-sans, sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 24pt;
-    
+    z-index: 4;
 }
 nav .navbar-nav  a{
     color: #1c2331;
     margin-left: 30px;
+    cursor: pointer;
   }
-
-.navbar-brand {
-    padding: 0;
-}
-
-
-.navbar-brand  img {
-    padding: 15px;  
-    height: 80px;
-}  
 
 #box {
     padding: 4%;
     width: 100%;
-    height: 500px;
-    background-color: #80a9c4;
-    position: absolute;
-    z-index: -1;
-    animation: 1s ease-out 0s 1 slideDown;
-}
-#hi {
+    height: 50%;
+    background-color: rgb(105,136,164);
     position: fixed;
-    margin-top: 240px;
-    margin-left: 250px;
-    text-align: left;
-    color: white;
-    font-size: 20pt;
-    font-weight: 100;
-    
+    z-index: -1;
 }
-.name {
-    width:1200px;
-    margin-top: 250px;
-    position: relative;
-    text-align: center;
+#identity {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 20pt;
+    font-weight: 200;
+    align-content: flex-start;
 }
 
+.helloim {
+    margin-left:-50%;
+    padding-top: 15%;
+    color: white;
+    line-height: 5%;
+}
+
+.name {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 100pt;
+    color: black;
+    line-height: 95%;
+}
+
+.subtext {
+    padding: 10pt;
+    font-size: 18pt;
+    font-weight: lighter;
+}
+.subtext:hover {
+    /*this should do something i think idk*/
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 20px 0px; 20px; 0px;
+    font-size: 10pt;
+    text-align: center;
+    width: 100%;
+    color: lightgray;
+    background-color: white;
+}
+.footer img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+/* RESUME */
+#resume img{
+    max-width: 100%;
+  height: auto;
+}
+
+/* CONTACT */
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -80,147 +191,35 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-#container {
-font-family: ainslie-sans, sans-serif;
-    margin-top: 40px;
-font-style: normal;
-  border-radius: 5px;
-  background-color: aliceblue;
-  padding: 50px;
-}
-
-.footer {
-    position: fixed;
-    bottom: 15px;
-    text-align: center;
-    width: 100%;
-    color: lightgray;
-}
-.footer img{
-    width: 30px;
-    margin-right: 10px;
-}
-
-/* ABOUT */
-#box2 {
-    padding: 4%;
-    width: 100%;
-    height:500px;
-    background-color: #80a9c4;
-    position: absolute;
-    z-index: -1;
-    animation: 1.5s ease-out 0s 1 expand forwards;
-    
-}
-@keyframes expand {
-    0%   {height: 500px;}
-    100% {height:850px;}
-}
-.name2 {
-    width:1200px;
-    margin-top: 250px;
-    position: relative;
-    text-align: center;
-    animation: 1.5s ease-out 0s 1 shrink forwards;
-}
-@keyframes shrink {
-    0%   {width:1200px; margin-top:250px}
-    100% {width:500px; margin-top:655px}
-}
-.subtext2 {
-    font-size: 20pt;
-    font-weight: 100;
-    animation: 1.5s ease-out 0s 1 bye forwards;
-}
-#hi2 {
-    position: fixed;
-    margin-top: 240px;
-    margin-left: 250px;
-    text-align: left;
-    color: white;
-    font-size: 20pt;
-    font-weight: 100;
-    animation: 1.5s ease-out 0s 1 bye forwards;
-    
-}
-@keyframes bye {
-    0%   {opacity: 100%;font-size: 20pt;}
-    100% {opacity: 0%;font-size: 10pt; margin-top:25px; }
-}
-
-#aboutbox {
-    position: absolute; 
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 0;
-    height: 0;
-    overflow: hidden;
-    width: 1000px;
-    font-size: 20pt;
-    background-color: white;
-    text-align: left;
-    animation: 1s ease-in 1.5s 1 hello forwards;
-}
-@keyframes hello {
-    0%   {height: 0px;}
-    100% {height: 650px;padding: 5%; }
-}
-
- #typing-text {
-     position: absolute; 
-     left: 50%;
-     transform: translate(-50%, 0);
-     overflow: hidden;
-     text-align: left;
-     resize: none;
-     border: none;
-     height: inherit;
-     width: 850px;
-     background: none;
-     margin-top: -20px;
-}
-
-/* CONTACT */
-
  #typing-textbold {
      position: absolute; 
-     left: 48%;
-     transform: translate(-50%, 0);
      overflow: hidden;
      text-align: left;
      resize: none;
      border: none;
      height: inherit;
-     width: 850px;
+     width: 100%;
      height: 60px;
      background: none;
      font-weight: bold;
-     margin-top: -20px;
-     z-index: 2;
+     z-index: 3;
+         padding:0;
 }
 .form {
     display:flex;
     flex-direction: column;
     width: 100%;
-    justify-content: space-between;
+    
 }
 .form2 {
     display:flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+    padding: 0px 100px 0px 100px;
 }
 form {
     margin-top: 60px;
     z-index: 5;
-    opacity: 0;
     font-size: 12pt;
-    animation: 1s ease-out 3.5s 1 form forwards;
-    width: 100%;
     color: black;  
        
 }
@@ -263,7 +262,7 @@ input[type=text] {
     border-radius: 3px 0px 0px 3px;
 }
 
-button{
+#button button{
     background-color: black;
     color: white;
     border-radius: 3px;
@@ -274,9 +273,14 @@ button{
   left: 50%;
   transform: translateX(-50%);
 }
-button:hover {
+#button button:hover {
     background-color: #80a9c4;
     border: 3px solid #80a9c4;
     
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}

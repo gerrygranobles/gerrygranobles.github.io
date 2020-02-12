@@ -3,15 +3,286 @@
 <head>
   <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <title>gerrygranobles</title>
+    <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ywz2fgm.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body> 
 
-  <center><h1>UNDER CONSTRUCTION</h1></center>
-  </body>
+<div id="box" class="text-center">
+    <nav class="navbar navbar-expand-lg justify-content-center">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html">home</a>
+                <a class="nav-item nav-link" id="myProjectsBtn">projects</a>
+                <a class="nav-item nav-link" id="myResumeBtn">resume</a>
+                <a class="nav-item nav-link" id="myBtn">about</a>
+                <a class="nav-item nav-link" id="myContactBtn">contact</a>
+                
+            </div> 
+    </nav>
+    
+   
+
+<!--
+    
+    
+ABOUT MODAL START
+    
+    
+-->
+<div id="myModall" class="modall">
+    <div class="modall-content">
+      <div class="modall-header">
+        <span class="close"></span>
+
+        <textarea id="typing-text" readonly></textarea>
+      </div>
+      <div class="modall-body">
+        i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website.
+      </div>
+      </div>
+</div>
+
+
+    <script>
+   var CharacterPos = 0;
+   var MsgBuffer = "";
+   var TypeDelay = 100; 
+   var NxtMsgDelay = 1000;
+   var MsgIndex = 0;
+   var delay = "";
+   var MsgArray = ["here's a little bit about me..."];
+
+   function StartTypingAbout() {
+      var id = document.getElementById("typing-text");
+      if (CharacterPos != MsgArray[MsgIndex].length) {
+         MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+         id.value = MsgBuffer+"_";
+         delay = TypeDelay;
+          
+      } else {
+         delay = NxtMsgDelay;
+         MsgBuffer   = "";
+         CharacterPos = -1;
+         if (MsgIndex!=MsgArray.length-1){
+           MsgIndex++;
+         }else {
+           MsgIndex = 1;
+         }
+       }
+       CharacterPos++;
+       setTimeout(StartTypingAbout,delay);
+   }
+    // Get the modal
+var modall = document.getElementById('myModall');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modall.classList.toggle('show');
+    setTimeout(function(){ StartTypingAbout(); }, 1500);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.classList.remove('show');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modall) {
+      modall.classList.remove('show');
+    }
+}
+</script>
+    <!--
+    
+    
+ABOUT MODAL END
+    
+    
+-->
+
+<!--
+    
+    
+RESUME MODAL START
+    
+    
+-->
+<div id="resumeModall" class="modall">
+    <div class="modall-content">
+      <div class="modall-header">
+        <span class="close"></span>
+
+      </div>
+      <div class="modall-body">
+       <img src="Resume.png" alt="gerry granobles' resume" id="resume">
+          <a href="resume.pdf">download resume</a>
+      </div>
+      </div>
+</div>
+
+
+    <script>
+  
+    // Get the modal
+var resumemodall = document.getElementById('resumeModall');
+
+// Get the button that opens the modal
+var resumebtn = document.getElementById("myResumeBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+resumebtn.onclick = function() {
+    resumemodall.classList.toggle('show');
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    resumemodall.classList.remove('show');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == resumemodall) {
+      resumemodall.classList.remove('show');
+    }
+}
+</script>
+    <!--
+    
+    
+RESUME MODAL END
+    
+    
+-->
+    <!--
+    
+    
+ABOUT CONTACT START
+    
+    
+-->
+<div id="contactModall" class="modall">
+    <div class="modall-content">
+      <div class="modall-header">
+        <span class="close"></span>
+
+        <textarea id="typing-textbold" readonly></textarea>
+      </div>
+      <div class="modall-body">
+        
+        <form action="https://submit-form.com/1We3qPKBQcme-77mjJxCv" target="_self">
+            <input type="hidden" name="_redirect" value="http://www.gerrygranobles.com/thanks.html"/>
+   <!-- All elements must have a name attribute -->
+            <div class="form2"><div class="form">
+            <div class="input-container">
+                <i class="fas fa-envelope icon"></i><input type="text" name="email" placeholder="your email" required></div><div class="input-container">
+                <i class="fa fa-user icon"></i><input type="text" name="name" placeholder="your name" required></div>
+                <div class="input-container">
+                <i class="fas fa-question icon"></i>
+                    <input type="text" name="subject" placeholder="subject" required></div>
+            </div>
+            
+            <textarea id="msg" name="message" placeholder="enter your message here" required></textarea>
+            </div>
+            <!-- A button of type submit --><br>
+            <div id="button"><button type="submit">send</button></div>
+        </form>
+      </div>
+      </div>
+</div>
+<script>
+   var CharacterPos = 0;
+   var MsgBuffer = "";
+   var TypeDelay = 100; 
+   var NxtMsgDelay = 1000;
+   var MsgIndex = 0;
+   var delay = "";
+   var ContactMsgArray = ["get in touch!"];
+
+   function StartTyping() {
+      var id = document.getElementById("typing-textbold");
+      if (CharacterPos != ContactMsgArray[MsgIndex].length) {
+         MsgBuffer  = MsgBuffer + ContactMsgArray[MsgIndex].charAt(CharacterPos);
+         id.value = MsgBuffer+"_";
+         delay = TypeDelay;
+          
+      } else {
+         delay = NxtMsgDelay;
+         MsgBuffer   = "";
+         CharacterPos = -1;
+         if (MsgIndex!=ContactMsgArray.length-1){
+           MsgIndex++;
+         }else {
+           MsgIndex = 1;
+         }
+       }
+       CharacterPos++;
+       setTimeout(StartTyping,delay);
+   }
+    // Get the modal
+var contactmodall = document.getElementById('contactModall');
+
+// Get the button that opens the modal
+var contactbtn = document.getElementById("myContactBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+contactbtn.onclick = function() {
+    contactmodall.classList.toggle('show');
+    setTimeout(function(){ StartTyping(); }, 1500);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    contactmodall.classList.remove('show');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == contactmodall) {
+      contactmodall.classList.remove('show');
+    }
+}
+</script>
+<!--
+    
+    
+ABOUT CONTACT END
+    
+    
+-->
+       
+    <div id="identity">
+        <div class="helloim">hello, i'm</div>
+        <div class="name">gerry granobles</div>
+        <div class="subtext">recent computer science graduate seeking a role in Digital Design &amp; Development</div>
+    </div>
+</div>
+    
+    <div class="footer"><a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="linkedinlogo.png"></a> 
+        <a  href="mailto:geraldinegranobles@gmail.com"><img class="contactimage" src="email.png"></a><br>
+    Designed and Developed by Gerry Granobles</div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html> 
