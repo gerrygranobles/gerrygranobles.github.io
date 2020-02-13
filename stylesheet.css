@@ -194,15 +194,15 @@ ABOUT
 */
 
 #about {
-    padding: 180px 100px 0px 100px;
+    padding: 5%;
     font-size: 1.5vw;
     text-align: justify;
     display: flex;
     align-items: center;
 }
 #bio {
-    flex:2;
-    padding-right: 50px;
+    width: 65%;
+    padding-right: 2%;
 }
 #picofme img{
     height: 350px;
