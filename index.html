@@ -6,284 +6,468 @@
     
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-<title>gerrygranobles</title>
+<title>gerry granobles</title>
     <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ywz2fgm.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
-
 <body> 
 
-<div id="box" class="text-center">
-    <nav class="navbar navbar-expand-lg justify-content-center">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html">home</a>
-                <a class="nav-item nav-link" id="myProjectsBtn">projects</a>
-                <a class="nav-item nav-link" id="myResumeBtn">resume</a>
-                <a class="nav-item nav-link" id="myBtn">about</a>
-                <a class="nav-item nav-link" id="myContactBtn">contact</a>
+    <div id="box" class="text-center">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="center">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">home</a>
+                    <a class="nav-item nav-link" id="myProjectsBtn">projects</a>
+                    <a class="nav-item nav-link" id="myResumeBtn">resume</a>
+                    <a class="nav-item nav-link" id="myAboutBtn">about</a>
+                    <a class="nav-item nav-link" id="myContactBtn">contact</a>
+                </div> 
+                </div>
+            </div>
+        </nav>
+
+        <!--
+
+
+        PROJECTS START
+
+
+        -->
+        <div id="projectsPage" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <span class="close"></span>
+                    <textarea id="typing-text" readonly></textarea>
+                </div>
+            <div class="page-body">
+                <div class="project">
+                        <h3>NO STIGMA</h3>
+                    <!-- GALLERY -->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <img src="nostigma.PNG" style="width:90%" class="center">
+                          <div class="caption">Landing Page</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                          <img src="post.PNG" style="width:100%" class="center">
+                          <div class="caption">Story Post</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                          <img src="belowthefold.PNG" style="width:100%" class="center">
+                          <div class="caption">About</div>
+                        </div>
+
+                        <a class="previmg" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="nextimg" onclick="plusSlides(1)">&#10095;</a>
+
+                        </div>
+                        <br>
+
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                  
+                    
+                    <div class="textright">
+                        No Stigma is a project I'm currently working on inspired by Humans of New York. It is a collection of stories from people who have lost loved ones to SUD(substance use disorder). Harris Insler lost his son to SUD and is working towardsending the stigma around SUD. The page will be a resource for people that want to understand life after loss to SUD and the ravaging effects it brings on the families and friends who remain to mourn and somehow go on. The page is expected to go live Spring 2020. 
+                    
+                </div>
+                </div>
                 
-            </div> 
-    </nav>
-    
-   
+            </div>
+            </div>
+        </div>
 
-<!--
-    
-    
-ABOUT MODAL START
-    
-    
--->
-<div id="myModall" class="modall">
-    <div class="modall-content">
-      <div class="modall-header">
-        <span class="close"></span>
 
-        <textarea id="typing-text" readonly></textarea>
-      </div>
-      <div class="modall-body">
-        <div id="about">
-            <div id="bio">i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website.</div><div id="picofme">pic of me</div></div>
-      </div>
-      </div>
-</div>
+        
+       <!--
 
+
+        PROJECTS END
+
+
+        -->
+
+
+       
+        <!--
+
+
+        RESUME START
+
+
+        -->
+        <div id="resumePage" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <span class="close"></span>
+                </div>
+                <div class="page-body">
+                    <img src="Resume.png" alt="gerry granobles' resume" id="resume">
+                    <a href="resume.pdf">download resume</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
+
+
+        RESUME END
+
+
+        -->
+         <!--
+
+
+        ABOUT START
+
+
+        -->
+        <div id="aboutPage" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <span class="close"></span>
+                    <textarea id="typing-text" readonly></textarea>
+                </div>
+            <div class="page-body">
+                <div id="about">
+                    <div id="bio">i recently graduated college with a degree in computer science with a concentration in software engineering. while in school, i learned i really enjoyed web design and front-end development. well actually, i guess that’s not true. i’ve been web building since early high school. i just forgot somewhere along the way how much i liked it. anyway, thanks for browsing my wee website.</div>
+                    <div id="picofme">pic of me</div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <script>
+           var CharacterPos = 0;
+           var MsgBuffer = "";
+           var TypeDelay = 100; 
+           var NxtMsgDelay = 1000;
+           var MsgIndex = 0;
+           var delay = "";
+           var MsgArray = ["here's a little bit about me..."];
+
+           function StartTypingAbout() {
+              var id = document.getElementById("typing-text");
+              if (CharacterPos != MsgArray[MsgIndex].length) {
+                 MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+                 id.value = MsgBuffer+"_";
+                 delay = TypeDelay;
+
+              } else {
+                 delay = NxtMsgDelay;
+                 MsgBuffer   = "";
+                 CharacterPos = -1;
+                 if (MsgIndex!=MsgArray.length-1){
+                   MsgIndex++;
+                 }else {
+                   MsgIndex = 1;
+                 }
+               }
+               CharacterPos++;
+               setTimeout(StartTypingAbout,delay);
+           }
+      
+        </script>
+            <!--
+
+
+        ABOUT END
+
+
+        -->
+
+        <!--
+
+
+        CONTACT START
+
+
+        -->
+        <div id="contactPage" class="page">
+            <div class="page-content">
+                <div class="page-header">
+                    <span class="close"></span>
+                    <textarea id="typing-textbold" readonly></textarea>
+                </div>
+                <div class="page-body">
+                    <form action="https://submit-form.com/1We3qPKBQcme-77mjJxCv" target="_self">
+                        <input type="hidden" name="_redirect" value="http://www.gerrygranobles.com/thanks.html"/>
+
+                        <div class="form2">
+                            <div class="form">
+                                <div class="input-container">
+                                    <i class="fas fa-envelope icon"></i>
+                                    <input type="text" name="email" placeholder="your email" class="field" required>
+                                </div>
+                                <div class="input-container">
+                                    <i class="fa fa-user icon"></i>
+                                    <input type="text" name="name" placeholder="your name"  class="field" required>
+                                </div>
+                                <div class="input-container">
+                                    <i class="fas fa-question icon"></i>
+                                    <input type="text" name="subject" placeholder="subject"  class="field" required>
+                                </div>
+                            </div>
+                            <textarea id="msg" name="message" placeholder="enter your message here" required></textarea>
+                        </div>
+                        <br>
+                        <div id="button">
+                            <button type="submit">send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+         <!--
+
+
+        CONTACT END
+
+
+        -->
+        <script>
+           var CharacterPos = 0;
+           var MsgBuffer = "";
+           var TypeDelay = 100; 
+           var NxtMsgDelay = 1000;
+           var MsgIndex = 0;
+           var delay = "";
+           var ContactMsgArray = ["get in touch!"];
+
+           function StartTyping() {
+              var id = document.getElementById("typing-textbold");
+              if (CharacterPos != ContactMsgArray[MsgIndex].length) {
+                 MsgBuffer  = MsgBuffer + ContactMsgArray[MsgIndex].charAt(CharacterPos);
+                 id.value = MsgBuffer+"_";
+                 delay = TypeDelay;
+
+              } else {
+                 delay = NxtMsgDelay;
+                 MsgBuffer   = "";
+                 CharacterPos = -1;
+                 if (MsgIndex!=ContactMsgArray.length-1){
+                   MsgIndex++;
+                 }else {
+                   MsgIndex = 1;
+                 }
+               }
+               CharacterPos++;
+               setTimeout(StartTyping,delay);
+           }
+
+
+        </script>
+        
+       
+
+        <div id="identity">
+            <div class="helloim">hello, i'm</div>
+            <div class="name">gerry granobles</div>
+            <div class="subtext">recent computer science graduate seeking a role in Digital Design &amp; Development</div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/">
+        <img class="contactimage" src="linkedinlogo.png"></a> 
+        <a  href="mailto:geraldinegranobles@gmail.com"><img class="contactimage" src="email.png"></a>
+        <br>
+        Designed and Developed by Gerry Granobles
+    </div>
 
     <script>
-   var CharacterPos = 0;
-   var MsgBuffer = "";
-   var TypeDelay = 100; 
-   var NxtMsgDelay = 1000;
-   var MsgIndex = 0;
-   var delay = "";
-   var MsgArray = ["here's a little bit about me..."];
+        
+/*
+            
+            
+            
+PAGES FUNCTIONAILTY
 
-   function StartTypingAbout() {
-      var id = document.getElementById("typing-text");
-      if (CharacterPos != MsgArray[MsgIndex].length) {
-         MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
-         id.value = MsgBuffer+"_";
-         delay = TypeDelay;
-          
-      } else {
-         delay = NxtMsgDelay;
-         MsgBuffer   = "";
-         CharacterPos = -1;
-         if (MsgIndex!=MsgArray.length-1){
-           MsgIndex++;
-         }else {
-           MsgIndex = 1;
-         }
-       }
-       CharacterPos++;
-       setTimeout(StartTypingAbout,delay);
-   }
-    // Get the modal
-var modall = document.getElementById('myModall');
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
+*/
+ // PROJECTS PAGE
+var projectspage = document.getElementById('projectsPage');
+
+// PROJECTS LINK THAT OPENS PROJECTS PAGE
+var projectsbtn = document.getElementById("myProjectsBtn");
+
+// RESUME PAGE
+var resumepage = document.getElementById('resumePage');
+
+// RESUME LINK THAT OPENS RESUME PAGE
+var resumebtn = document.getElementById("myResumeBtn");
+
+// ABOUT PAGE
+var aboutpage = document.getElementById('aboutPage');
+
+// ABOUT LINK THAT OPENS ABOUT PAGE
+var aboutbtn = document.getElementById("myAboutBtn");
+
+/// CONTACT PAGE
+var contactpage = document.getElementById('contactPage');
+
+// CONTACT LINK THAT OPENS CONTACT PAGE
+var contactbtn = document.getElementById("myContactBtn");
+
+// TO CLOSE PAGE
 var span = document.getElementsByClassName("close")[0];
+           
+            
+// ======  PROJECTS   ======
+            
+            
+            
+// OPEN PROJECTS PAGE CLOSES ANY OPEN PAGE
+projectsbtn.onclick = function() {
+    aboutpage.classList.remove('show');
+	contactpage.classList.remove('show');
+    resumepage.classList.remove('show');
+    projectspage.classList.toggle('show');
+}
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modall.classList.toggle('show');
+// CLOSE PROJECTS PAGE
+span.onclick = function() {
+    projectspage.classList.remove('show');
+}
+
+// CLICK OUTSIDE OF PAGE CLOSES IT
+window.onclick = function(event) {
+    if (event.target == projectspage) {
+      projectspage.classList.remove('show');
+    }
+}
+
+            
+            
+// ======  RESUME   ======
+            
+            
+            
+// OPEN RESUME PAGE CLOSES ANY OPEN PAGE
+resumebtn.onclick = function() {
+    aboutpage.classList.remove('show');
+	contactpage.classList.remove('show');
+    projectspage.classList.remove('show');
+    resumepage.classList.toggle('show');
+}
+
+// CLOSE RESUME PAGE
+span.onclick = function() {
+    resumepage.classList.remove('show');
+}
+
+// CLICK OUTSIDE OF PAGE CLOSES IT
+window.onclick = function(event) {
+    if (event.target == resumepage) {
+      resumepage.classList.remove('show');
+    }
+}
+
+
+
+// ======  ABOUT   ======
+
+
+
+// OPEN ABOUT PAGE CLOSES ANY OPEN PAGE
+aboutbtn.onclick = function() {
+	resumepage.classList.remove('show');
+	contactpage.classList.remove('show');
+    projectspage.classList.remove('show');	
+    aboutpage.classList.toggle('show');
     setTimeout(function(){ StartTypingAbout(); }, 1500);
 }
 
-// When the user clicks on <span> (x), close the modal
+// CLOSE ABOUT PAGE
 span.onclick = function() {
-    modall.classList.remove('show');
+    aboutpage.classList.remove('show');
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// CLICK OUTSIDE OF PAGE CLOSES IT
 window.onclick = function(event) {
-    if (event.target == modall) {
-      modall.classList.remove('show');
+    if (event.target == aboutpage) {
+      aboutpage.classList.remove('show');
     }
 }
-</script>
-    <!--
-    
-    
-ABOUT MODAL END
-    
-    
--->
-
-<!--
-    
-    
-RESUME MODAL START
-    
-    
--->
-<div id="resumeModall" class="modall">
-    <div class="modall-content">
-      <div class="modall-header">
-        <span class="close"></span>
-
-      </div>
-      <div class="modall-body">
-       <img src="Resume.png" alt="gerry granobles' resume" id="resume">
-          <a href="resume.pdf">download resume</a>
-      </div>
-      </div>
-</div>
 
 
-    <script>
-  
-    // Get the modal
-var resumemodall = document.getElementById('resumeModall');
 
-// Get the button that opens the modal
-var resumebtn = document.getElementById("myResumeBtn");
+// ======  CONTACT   ======
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-resumebtn.onclick = function() {
-    resumemodall.classList.toggle('show');
-}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    resumemodall.classList.remove('show');
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == resumemodall) {
-      resumemodall.classList.remove('show');
-    }
-}
-</script>
-    <!--
-    
-    
-RESUME MODAL END
-    
-    
--->
-    <!--
-    
-    
-ABOUT CONTACT START
-    
-    
--->
-<div id="contactModall" class="modall">
-    <div class="modall-content">
-      <div class="modall-header">
-        <span class="close"></span>
-
-        <textarea id="typing-textbold" readonly></textarea>
-      </div>
-      <div class="modall-body">
-        
-        <form action="https://submit-form.com/1We3qPKBQcme-77mjJxCv" target="_self">
-            <input type="hidden" name="_redirect" value="http://www.gerrygranobles.com/thanks.html"/>
-   <!-- All elements must have a name attribute -->
-            <div class="form2"><div class="form">
-            <div class="input-container">
-                <i class="fas fa-envelope icon"></i><input type="text" name="email" placeholder="your email" class="field" required></div><div class="input-container">
-                <i class="fa fa-user icon"></i><input type="text" name="name" placeholder="your name"  class="field" required></div>
-                <div class="input-container">
-                <i class="fas fa-question icon"></i>
-                    <input type="text" name="subject" placeholder="subject"  class="field" required></div>
-            </div>
-            
-            <textarea id="msg" name="message" placeholder="enter your message here" required></textarea>
-            </div>
-            <!-- A button of type submit --><br>
-            <div id="button"><button type="submit">send</button></div>
-        </form>
-      </div>
-      </div>
-</div>
-<script>
-   var CharacterPos = 0;
-   var MsgBuffer = "";
-   var TypeDelay = 100; 
-   var NxtMsgDelay = 1000;
-   var MsgIndex = 0;
-   var delay = "";
-   var ContactMsgArray = ["get in touch!"];
-
-   function StartTyping() {
-      var id = document.getElementById("typing-textbold");
-      if (CharacterPos != ContactMsgArray[MsgIndex].length) {
-         MsgBuffer  = MsgBuffer + ContactMsgArray[MsgIndex].charAt(CharacterPos);
-         id.value = MsgBuffer+"_";
-         delay = TypeDelay;
-          
-      } else {
-         delay = NxtMsgDelay;
-         MsgBuffer   = "";
-         CharacterPos = -1;
-         if (MsgIndex!=ContactMsgArray.length-1){
-           MsgIndex++;
-         }else {
-           MsgIndex = 1;
-         }
-       }
-       CharacterPos++;
-       setTimeout(StartTyping,delay);
-   }
-    // Get the modal
-var contactmodall = document.getElementById('contactModall');
-
-// Get the button that opens the modal
-var contactbtn = document.getElementById("myContactBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
+// OPEN CONTACT PAGE CLOSES ANY OPEN PAGE
 contactbtn.onclick = function() {
-    contactmodall.classList.toggle('show');
+	aboutpage.classList.remove('show');
+	resumepage.classList.remove('show');	
+    projectspage.classList.remove('show');
+    contactpage.classList.toggle('show');
     setTimeout(function(){ StartTyping(); }, 1500);
 }
 
-// When the user clicks on <span> (x), close the modal
+// CLOSE CONTACT PAGE
 span.onclick = function() {
-    contactmodall.classList.remove('show');
+    contactpage.classList.remove('show');
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// CLICK OUTSIDE OF PAGE CLOSES IT
 window.onclick = function(event) {
-    if (event.target == contactmodall) {
-      contactmodall.classList.remove('show');
+    if (event.target == contactpage) {
+      contactpage.classList.remove('show');
     }
 }
-</script>
-<!--
-    
-    
-ABOUT CONTACT END
-    
-    
--->
-       
-    <div id="identity">
-        <div class="helloim">hello, i'm</div>
-        <div class="name">gerry granobles</div>
-        <div class="subtext">recent computer science graduate seeking a role in Digital Design &amp; Development</div>
-    </div>
-</div>
-    
-    <div class="footer"><a  href="https://www.linkedin.com/in/geraldine-granobles-16466616a/"><img class="contactimage" src="linkedinlogo.png"></a> 
-        <a  href="mailto:geraldinegranobles@gmail.com"><img class="contactimage" src="email.png"></a><br>
-    Designed and Developed by Gerry Granobles</div>
-    
-    
+    </script>
+      <script>
+                   var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+                    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
 </html> 
