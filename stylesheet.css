@@ -7,6 +7,7 @@ html{
     height: 100%;
     width:100%;
     overflow: hidden;
+    font-size:100%;
 }
 body {
     font-family: ainslie-sans, sans-serif;
@@ -17,6 +18,10 @@ h1 {
     font-weight: 600;
     text-align: left;
 }
+img { max-width: 100%; height: auto; }
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} } 
 /* 
 
     PAGE  
@@ -119,7 +124,7 @@ color: black;
     right: 0;
     display: flex;
     flex-direction: column;
-    font-size: 1.8vw;
+    
     font-weight: 200;
     align-content: flex-start;
 }
@@ -130,19 +135,20 @@ color: black;
     color: white;
     line-height: 5%;
 }
-
+@media (min-width: 640px) { .name{font-size:3rem;} } 
+@media (min-width:960px) { .name{font-size:5.2rem;} } 
+@media (min-width:1100px) { .name{font-size:10.5rem;} }
 .name {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 9vw;
+    
     color: black;
     line-height: 95%;
 }
 
 .subtext {
     padding: 20px;
-    font-size: 1.3vw;
     font-weight: lighter;
 }
 
