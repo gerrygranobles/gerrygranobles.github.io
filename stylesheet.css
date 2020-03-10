@@ -7,7 +7,6 @@ html{
     height: 100%;
     width:100%;
     overflow: hidden;
-    font-size:100%;
 }
 body {
     font-family: ainslie-sans, sans-serif;
@@ -18,11 +17,6 @@ h1 {
     font-weight: 600;
     text-align: left;
 }
-img { max-width: 100%; height: auto; }
-@media (min-width: 480px) { body {font-size:.5rem;} } 
-@media (min-width: 640px) { body {font-size:1rem;} } 
-@media (min-width:960px) { body {font-size:1.2rem;} } 
-@media (min-width:1100px) { body {font-size:1.5rem;} } 
 /* 
 
     PAGE  
@@ -38,6 +32,7 @@ img { max-width: 100%; height: auto; }
     bottom: -100%;
     opacity: 0;
     transition: bottom 1s, opacity 0.4s;
+    padding: 0px 100px 0px 100px;
     
 }
 .page.show {
@@ -67,8 +62,8 @@ img { max-width: 100%; height: auto; }
     padding-bottom: 50%}
 
 .page-body img{
-    min-width: 100%;
-    height: auto;
+    max-width: 100%;
+  height: auto;
 }
 
 .page-content {
@@ -107,8 +102,6 @@ color: #2e2e2e;
 .navbar-light .navbar-nav .nav-link:hover {
 color: black;
 }
-
-
 #box {
     padding: 2%;
     width: 100%;
@@ -126,33 +119,30 @@ color: black;
     right: 0;
     display: flex;
     flex-direction: column;
+    font-size: 1.8vw;
     font-weight: 200;
     align-content: flex-start;
 }
-@media (min-width: 640px) { .helloim{font-size:1.5rem;} } 
-@media (min-width:960px) { .helloim{font-size:2.2rem;} } 
-@media (min-width:1100px) { .helloim{font-size:3rem;} }
+
 .helloim {
-    margin-left:20%;
+    margin-left:-50%;
     padding-top: 15%;
     color: white;
-    text-align: left;
     line-height: 5%;
 }
-@media (min-width: 480px) { .name{font-size:3rem;} } 
-@media (min-width: 640px) { .name{font-size:3rem;} } 
-@media (min-width:960px) { .name{font-size:5.2rem;} } 
-@media (min-width:1100px) { .name{font-size:10.5rem;} }
+
 .name {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
+    font-size: 9vw;
     color: black;
     line-height: 95%;
 }
 
 .subtext {
     padding: 20px;
+    font-size: 1.3vw;
     font-weight: lighter;
 }
 
@@ -164,7 +154,8 @@ PROJECT
 
 */
 .project {
-    padding: 20px;
+    padding: 80px 120px 0px 120px;
+    font-size: 1vw;
     text-align: justify;
 }
 h3 {
@@ -204,14 +195,18 @@ ABOUT
 
 #about {
     padding: 5%;
+    font-size: 1.5vw;
     text-align: justify;
+    display: flex;
+    align-items: center;
 }
 #bio {
-    width: 100%;
+    width: 65%;
     padding-right: 2%;
 }
 #picofme img{
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     background-color: antiquewhite;
 }
@@ -223,27 +218,7 @@ CONTACT
 
 
 */
-@media (min-width: 640px) { .form{float:none;} } 
-@media (min-width:960px) { .form{float:left; width: 50%;
-    padding-right: 20px;} .form2{margin-left: 50%;}} 
-@media (min-width:1100px) { .form{float:left; width: 50%;    padding-right: 20px;} .form2{margin-left: 50%;}}
-form{
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    padding: 40px;
-}
-    .form {
-    height: 250px;
-        position: relative;
-    border-radius: 3px;
-         display: flex;
-  flex-direction: column;
-}
-.form2 {
-    position: relative;
-    height: 250px;
-}
+
 input[type=submit] {
   background-color: black;
   color: white;
@@ -253,6 +228,24 @@ input[type=submit] {
   cursor: pointer;
 }
 
+
+.form {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    border-radius: 3px;
+    
+}
+.form2 {
+    display:flex;
+    padding: 0px 100px 0px 100px;
+}
+form {
+    margin-top: 30px;
+    z-index: 1;
+    font-size: .9vw;
+    color: black;  
        
 }
 ::placeholder { 
@@ -265,22 +258,18 @@ input[type=submit] {
      border: 3px solid black;
     border-left: none;
     border-radius: 0px 3px 3px 0px;
-    width: 100%;  
+    width:80%;  
     padding: 10px;
     margin: 10px 0px 10px 0px;
     
 }
-.form > div {
-  /* these are the flex items */
-  flex: 1;
-}
-
 #msg {
+    border:none;
     border: 3px solid black;
     border-radius: 3px;
     width: 100%;
-    max-height: 235px;
-    padding: 20px;
+    padding: 10px;
+    margin: 6px 0px 0px 0px;
 }
 @keyframes form {
     0%   {opacity: 0%;}
@@ -289,20 +278,17 @@ input[type=submit] {
 .input-container {
   display: -ms-flexbox; 
   display: flex;
-    height: 100%;
   width: 100%;
-    flex-direction: row;
+    padding-bottom: 0px;
 }
-textarea {
-    resize: vertical;
-}
+
 .icon {
     margin: 10px 0px 10px 0px;
     top:0px;
     padding: 15px;
     background: none;
     color: black;
-    max-width: 50px;
+    min-width: 50px;
     text-align: center;
     border: 3px solid black;
     border-right:none;
@@ -310,14 +296,17 @@ textarea {
 }
 
 #button button{
+    font-size: 1vw;
     background-color: black;
     color: white;
     border-radius: 3px;
     border: 3px solid black;
     padding: 20px;
-    width: 100%;
-    position: relative;
+    width: 80%;
+    position: absolute;
     margin-top:30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #button button:hover {
     background-color: #80a9c4;
@@ -365,13 +354,11 @@ FOOTER
 
 */
 
-@media (min-width: 640px) { .footer{font-size:.8rem;} } 
-@media (min-width:960px) { .footer{font-size:.8rem;} } 
-@media (min-width:1100px) { .footer{font-size:.8rem;} }
 .footer {
     position: fixed;
     bottom: 0px;
     padding: 20px 0px; 20px; 0px;
+    font-size: .7vw;
     text-align: center;
     width: 100%;
     color: lightgray;
